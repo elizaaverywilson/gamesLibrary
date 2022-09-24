@@ -39,7 +39,7 @@ def create_config():
         print(str(config_path) + """ does not exist. 
             Creating """ + config_path.name + ' ...')
 
-        with open(config_path) as file:
+        with open(config_path, 'w') as file:
             file.write(tomlkit.dumps(_default_config()))
 
         print(config_path.name + ' created at ' + str(config_path) + '.')
