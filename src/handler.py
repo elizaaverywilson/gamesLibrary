@@ -1,15 +1,17 @@
 import datetime
 import json
 
+# noinspection PyPackageRequirements
 import berserk
 
-from config_parser import Settings
+from settings import Settings
 
 
-def get_client(settings=Settings()):
-    """Creates lichess client, authenticated or not based on if they are configured"""
-    if settings.use_Token:
-        with open(settings.tokenPath) as f:
+def get_client(settings: Settings):
+    """Creates lichess client.
+    Client is authenticated or not based on configuration."""
+    if settings.use_token:
+        with open(settings.token_path) as f:
             token = f.read()
         session = berserk.TokenSession(token)
         client = berserk.Client(session)

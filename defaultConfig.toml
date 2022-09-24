@@ -1,9 +1,0 @@
-# TODO deprecate and generate from code in setup.py
-title = "config"
-
-[authentication]
-use_Token = false
-tokenPath = '~/.config/gamesLibrary/lichessToken.txt'
-
-[lichess]
-username = 'gmwesleyso1993'

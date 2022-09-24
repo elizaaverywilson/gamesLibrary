@@ -3,3 +3,4 @@
 /.idea/modules.xml
 /.idea/misc.xml
 /.idea/gamesLibrary.iml
+!/tests/.pytest_cache/
